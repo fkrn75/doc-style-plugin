@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>문서 제목</title>
+<!-- 미리보기용 외부 참조. 최종 산출물에서는 doc-style.css 내용을 <style>로 인라인할 것 -->
+<link rel="stylesheet" href="doc-style.css">
+</head>
+<body>
+
+  <!-- 인쇄/PDF 버튼 (그대로 유지) -->
+  <div class="toolbar no-print">
+    <button class="btn" onclick="window.print()" type="button">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+      인쇄 / PDF 저장
+    </button>
+  </div>
+
+  <div class="wrap">
+
+    <!-- ===== 헤더 (그라데이션 강조) ===== -->
+    <header class="doc">
+      <p class="eyebrow">분류 라벨 · Category</p>
+      <h1>문서 제목</h1>
+      <p class="subtitle">한 줄 부제 — 핵심을 요약</p>
+      <div class="meta">
+        <div class="cell"><span class="k">항목1</span><span class="v">값</span></div>
+        <div class="cell"><span class="k">항목2</span><span class="v">값</span></div>
+        <div class="cell"><span class="k">항목3</span><span class="v">값</span></div>
+        <div class="cell"><span class="k">항목4</span><span class="v">값</span></div>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- ===== 요약 카드 (좌측 강조 바) ===== -->
+      <section class="card summary">
+        <h2><span class="num">·</span>한눈에 보기</h2>
+        <p>문서 전체를 1~3문장으로 요약. <strong>강조</strong>는 strong으로.</p>
+      </section>
+
+      <!-- ===== 번호 섹션 카드 ===== -->
+      <section class="card">
+        <h2><span class="num">1</span>섹션 제목</h2>
+        <p>본문 문단.</p>
+        <ul>
+          <li>목록 항목.</li>
+        </ul>
+        <!-- 소제목이 필요하면 -->
+        <h3>소제목</h3>
+        <p>본문.</p>
+        <!-- 코드 블록이 필요하면 -->
+        <pre><code>예시 코드</code></pre>
+        <!-- 콜아웃: 참고 -->
+        <div class="callout info"><strong>참고</strong><p>부가 설명.</p></div>
+        <!-- 콜아웃: 주의 -->
+        <div class="callout warn"><strong>주의</strong><p>경고 내용.</p></div>
+      </section>
+
+      <!-- ===== 표 (모바일 가로 스크롤) ===== -->
+      <section class="card">
+        <h2><span class="num">2</span>표가 있는 섹션</h2>
+        <div class="table-wrap">
+          <table class="spec">
+            <thead>
+              <tr><th>열1</th><th>열2</th><th>열3</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="key">키</td><td>설명 <span class="tag req">필수</span></td><td>값</td></tr>
+              <tr><td class="key">키</td><td>설명 <span class="tag opt">선택</span></td><td>값</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ===== 체크리스트 / 결정사항 (초록 체크) ===== -->
+      <section class="card checklist">
+        <h2><span class="num">✓</span>체크리스트</h2>
+        <ul>
+          <li><strong>항목</strong> — 설명.</li>
+        </ul>
+      </section>
+
+    </main>
+
+    <footer class="doc">
+      <div>푸터 — 출처·링크 등.</div>
+      <div class="note">부가 주석.</div>
+    </footer>
+
+  </div>
+</body>
+</html>

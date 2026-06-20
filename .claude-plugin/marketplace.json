@@ -1,0 +1,13 @@
+{
+  "name": "doc-style",
+  "owner": {
+    "name": "홍명근(David)"
+  },
+  "plugins": [
+    {
+      "name": "doc-style",
+      "source": "./",
+      "description": "일관된 사내 스타일로 HTML 문서(회의록·매뉴얼·리포트·사용설명서)를 생성. 그라데이션 강조 헤더·번호 섹션·콜아웃·체크리스트·표 + A4 인쇄·모바일 반응형."
+    }
+  ]
+}
