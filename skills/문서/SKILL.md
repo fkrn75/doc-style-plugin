@@ -17,8 +17,26 @@ description: 사용자가 명시적으로 호출(`/doc-style:문서 ...`)할 때
 
 ## 자산 (반드시 사용)
 
-- 디자인 시스템 CSS: `${CLAUDE_PLUGIN_ROOT}/skills/문서/doc-style.css` ← 스타일의 단일 출처(SSOT)
+- 디자인 시스템 CSS: `${CLAUDE_PLUGIN_ROOT}/skills/문서/doc-style.css` ← 스타일의 단일 출처(SSOT). **가능하면 반드시 이 파일을 읽어 통째로 인라인한다.**
 - 구조 템플릿:       `${CLAUDE_PLUGIN_ROOT}/skills/문서/template.html` ← 블록 마크업 패턴 참조
+
+## 핵심 색 토큰 (css 파일을 못 읽는 환경 대비 — 이 값을 정확히 사용)
+
+`doc-style.css`를 읽을 수 없더라도 색은 **반드시 아래 값**을 쓴다. 임의의 다른 파랑/보라/밝은 색으로 그리지 말 것(추측 금지).
+
+```
+--accent:      #2b4c8c   /* 포인트 네이비 (밝은 파랑·보라 아님) */
+--head-from:   #2b4c8c   /* 헤더 그라데이션 시작 */
+--head-to:     #16294d   /* 헤더 그라데이션 끝 (진한 네이비) */
+--accent-soft: #eef2fb   --accent-line: #c7d3ee
+--bg:          #f4f6fa   /* 페이지 배경(회청) */   --card: #ffffff
+--ink:         #1c2230   --ink-soft: #4a5568   --muted: #6b7280   --line: #e3e7ef
+--ok:          #1f7a4d   --ok-soft: #e8f5ee     /* 체크리스트 초록 */
+--warn:        #b25b1b   --warn-soft: #fdf0e6   /* 주의 콜아웃 */
+```
+
+- 헤더: `background:linear-gradient(135deg,#2b4c8c 0%,#16294d 100%); color:#fff;` (차분한 네이비, **보라빛 금지**)
+- 폰트: `"Pretendard",-apple-system,"Malgun Gothic",sans-serif` + `word-break:keep-all`
 
 ## 절차
 
